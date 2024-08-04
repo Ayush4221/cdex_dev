@@ -5,7 +5,7 @@ import db from "@/app/db";
 import { Connection, Keypair, VersionedTransaction } from "@solana/web3.js";
 
 export async function POST(req: NextRequest) {
-    const connection = new Connection("https://mainnet.helius-rpc.com/?api-key=5935eb6e-9c4e-4031-b4b6-f1290106d2d6")
+    const connection = new Connection("https://mainnet.helius-rpc.com/?api-key=a4d54ade-391d-451c-ac37-b3740aa7f0cd")
     const data: {
         quoteResponse: any
     } = await req.json();
