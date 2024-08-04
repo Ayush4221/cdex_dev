@@ -8,6 +8,7 @@ import { TokenWithbalance, useTokens } from "../api/hooks/useTokens";
 import { TokenList } from "./TokenList";
 import { Swap } from "./Swap";
 import SkewLoader from "react-spinners/SkewLoader";
+import Image from 'next/image';
 
 type Tab = "tokens" | "send" | "add_funds" | "swap" | "withdraw";
 const tabs: { id: Tab; name: string }[] = [
@@ -75,7 +76,7 @@ export const ProfileCard = ({ publicKey }: { publicKey: string }) => {
 function Warning() {
   return (
     <div className="bg-slate-50 py-32 px-10 flex justify-center">
-      We don't yet support this feature
+      We don&apos;t yet support this feature
     </div>
   );
 }
@@ -150,7 +151,7 @@ function Greeting({
 }) {
   return (
     <div className="flex p-12">
-      <img src={image} className="rounded-full w-16 h-16 mr-4" />
+      <Image src={image} alt="User profile picture" className="rounded-full w-16 h-16 mr-4" width={64} height={64} />
       <div className="text-2xl font-semibold flex flex-col justify-center">
         Welcome back, {name}
       </div>
