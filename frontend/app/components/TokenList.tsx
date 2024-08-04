@@ -1,6 +1,6 @@
 import { TokenWithbalance } from "../api/hooks/useTokens"
 
-
+import Image from 'next/image';
 export function TokenList({tokens}: {
     tokens: TokenWithbalance[]
 }) {
@@ -15,7 +15,13 @@ function TokenRow({token}: {
     return <div className="flex justify-between">
         <div className="flex">
             <div>
-                <img src={token.image} className="h-10 w-10 rounded-full mr-2" />
+            <Image 
+            src={token.image} 
+            alt={token.name} 
+            width={50} 
+            height={50} 
+            className="rounded-full" 
+          />
             </div>
             <div>
                 <div className="font-bold">
